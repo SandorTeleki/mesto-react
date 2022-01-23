@@ -6,6 +6,7 @@ function PopupWithForm(props) {
           <form className={`edit-form popup__form popup__form_type_${props.name}`} name={props.name} id={props.name} noValidate>
             <h2 className={`popup__heading ${props.name === 'update-avatar-form'? 'popup__form-heading_type_update-avatar-form': ''}`}>{props.title}</h2>
             {props.children}
+            <button type="submit" className="popup__submit-button popup__submit-button_type_confirm-delete-form">Сохранить</button>
           </form>
         </div>
       </div>

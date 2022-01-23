@@ -13,3 +13,7 @@
         background-color: #fff;
     }
 }
+
+.popup__form:last-child {
+    margin-bottom: 30px;
+}

@@ -16,22 +16,27 @@ function Card (props) {
 
     return (
       (<li className="card" >
-        <img className="card__picture" 
-              onClick={handleClick} 
-              src={props.card.link} 
-              alt={`${props.card.name}`}/> 
-        <h2 className="card__title">{props.card.name}</h2>
+        <img 
+          className="card__picture" 
+          onClick={handleClick} 
+          src={props.card.link} 
+          alt={`${props.card.name}`}/> 
+        <h2 className="card__title">
+          {props.card.name}
+        </h2>
         <div className="card__like-section">
-          <button type="button"
-                  onClick={props.onCardLike}
-                  className={`card__reaction  ${isLiked && 'card__reaction_active'} `} 
-                  aria-label="лайк">{}</button>
+          <button 
+            type="button"
+            onClick={props.onCardLike}
+            className={`card__reaction  ${isLiked && 'card__reaction_active'} `} 
+            aria-label="лайк">
+            {}  
+          </button>
           <span className="card__like-quantity">{props.card.likes.length}</span>
         </div>
-        <button type="button"
-                onClick={handleConfirmDelete}
-                className={`card__delete${isOwn ? '' : '_inactive'}`} 
-                aria-label="удалить">{}</button>
+        <button type="button" onClick={handleConfirmDelete} className={`card__delete${isOwn ? '' : '_inactive'}`} aria-label="удалить">
+          {}
+        </button>
       </li>))
   }
   

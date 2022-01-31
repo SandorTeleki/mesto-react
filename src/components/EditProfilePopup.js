@@ -27,42 +27,43 @@ function EditProfilePopup (props) {
 
 
   return (
-    <PopupWithForm name={'edit-profile-form'} 
-                  title='Редактировать профиль'
-                  isOpen={props.isOpen}
-                  onClose={props.onClose} 
-                  onSubmit={handleSubmit} 
-                  onLoading={props.onLoading}>
-      <fieldset className={'popup__inputs'} 
-                form={'edit-profile-form'}>
-        <input type="text"
-               className="popup__input"
-               name="profileName"
-               value={name.value}
-               onChange={name.handleChange}
-               placeholder="имя"
-               id="nameinput"
-               minLength="2"
-               maxLength="40"
-               required/>
-        <span className={`popup__error 
-        ${showNameError&& 'popup__error_visible'}`}>{name.error}</span>
-        <input type="text"
-               className="popup__input"
-               name="description"
-               value={description.value}
-               onChange={description.handleChange}
-               placeholder="работа"
-               id="jobdescription"
-               minLength="2"
-               maxLength="200"
-               required/>
-        <span className={`popup__error
-        ${showDescriptionError&& 'popup__error_visible'}`}>{description.error}</span>
-        <button type="submit"
-                className={`popup__submit-button 
-                ${(showDisabledSubmitButton)&& 'popup__submit-button_inactive'}`}
-                >
+    <PopupWithForm 
+      name={'edit-profile-form'} 
+      title='Редактировать профиль'
+      isOpen={props.isOpen}
+      onClose={props.onClose} 
+      onSubmit={handleSubmit} 
+      onLoading={props.onLoading}>
+      <fieldset className={'popup__inputs'} form={'edit-profile-form'}>
+        <input 
+          type="text"
+          className="popup__input"
+          name="profileName"
+          value={name.value}
+          onChange={name.handleChange}
+          placeholder="имя"
+          id="nameinput"
+          minLength="2"
+          maxLength="40"
+          required/>
+        <span className={`popup__error ${showNameError&& 'popup__error_visible'}`}>
+          {name.error}
+        </span>
+        <input 
+          type="text"
+          className="popup__input"
+          name="description"
+          value={description.value}
+          onChange={description.handleChange}
+          placeholder="работа"
+          id="jobdescription"
+          minLength="2"
+          maxLength="200"
+          required/>
+        <span className={`popup__error${showDescriptionError&& 'popup__error_visible'}`}>
+          {description.error}
+        </span>
+        <button type="submit" className={`popup__submit-button ${(showDisabledSubmitButton)&& 'popup__submit-button_inactive'}`}>
           {isLoading? "Сохранение...": "Сохранить"}
         </button>
       </fieldset> 

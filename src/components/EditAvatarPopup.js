@@ -22,32 +22,32 @@ function EditAvatarPopup(props) {
 
   return (
   
-    <PopupWithForm name={'update-avatar-form'}
-                         title='Обновить аватар'
-                         isOpen={props.isOpen}
-                         onClose={props.onClose}
-                         onSubmit={handleSubmit}
-                         onLoading={props.onLoading}>
-        <fieldset className={'popup__inputs'}>
-            <input type="url"
-                className="popup__input"
-                name="link"
-                ref={avatarRef}
-                onChange={(event) => {
-                    avatar.handleError(event.target);
-                }}
-                placeholder="Ссылка на картинку профиля"
-                id="avatar-link"
-                required/>
-            <span className={`popup__error 
-            ${showAvatarError && 'popup__error_visible'}`}>{avatar.error}</span>
-            <button type="submit"
-                    className={`popup__submit-button
-                    ${showDisabledSubmitButton && 'popup__submit-button_inactive'}`}
-                    >
-              {isLoading ? 'Сохранение...' : 'Сохранить'}
-            </button>
-        </fieldset>
+    <PopupWithForm 
+      name={'update-avatar-form'}
+      title='Обновить аватар'
+      isOpen={props.isOpen}
+      onClose={props.onClose}
+      onSubmit={handleSubmit}
+      onLoading={props.onLoading}>
+      <fieldset className={'popup__inputs'}>
+        <input 
+          type="url"
+          className="popup__input"
+          name="link"
+          ref={avatarRef}
+          onChange={(event) => {
+              avatar.handleError(event.target);
+          }}
+          placeholder="Ссылка на картинку профиля"
+          id="avatar-link"
+          required/>
+        <span className={`popup__error ${showAvatarError && 'popup__error_visible'}`}>
+          {avatar.error}
+        </span>
+        <button type="submit" className={`popup__submit-button ${showDisabledSubmitButton && 'popup__submit-button_inactive'}`}>
+          {isLoading ? 'Сохранение...' : 'Сохранить'}
+        </button>
+      </fieldset>
     </PopupWithForm>)
 }
 

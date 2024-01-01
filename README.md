@@ -24,7 +24,7 @@
 3. Запустить локально:
 `npm start`
 
-Страница на Github: https://sandorteleki.github.io/mesto-react/
+Страница на Github: https://sandorteleki.github.io/mesto-react/  
 &copy; 2022 Шандор Телеки
 
 
@@ -49,5 +49,5 @@ A service to share pictures with other users, while also viewing the pictures of
 3. Start it locally:
 `npm start`
 
-Page hosted through Github Pages: https://sandorteleki.github.io/mesto-react/
+Page hosted through Github Pages: https://sandorteleki.github.io/mesto-react/  
 &copy; 2022 Sandor Teleki

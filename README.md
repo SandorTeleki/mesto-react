@@ -17,11 +17,12 @@
 ![CSS3](https://img.shields.io/badge/-CSS3-090909?style=for-the-badge&logo=CSS3)
 
 ### Инструкция по установке:
-1. Клонировать репозиторий:
+
+1. Клонировать репозиторий:  
 `git clone https://github.com/SandorTeleki/mesto-react.git`
-2. Установить зависимости:
+2. Установить зависимости:  
 `npm install`
-3. Запустить локально:
+3. Запустить локально:  
 `npm start`
 
 Страница на Github: https://sandorteleki.github.io/mesto-react/  
@@ -42,11 +43,12 @@ A service to share pictures with other users, while also viewing the pictures of
 ![CSS3](https://img.shields.io/badge/-CSS3-090909?style=for-the-badge&logo=CSS3)
 
 ### Installation instructions:
-1. Copy the repository:
+
+1. Copy the repository:  
 `git clone https://github.com/SandorTeleki/mesto-react.git`
-2. Install dependencies:
+2. Install dependencies:  
 `npm install`
-3. Start it locally:
+3. Start it locally:  
 `npm start`
 
 Page hosted through Github Pages: https://sandorteleki.github.io/mesto-react/  
